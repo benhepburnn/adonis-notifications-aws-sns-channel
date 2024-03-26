@@ -1,7 +1,7 @@
 {
-  "name": "@benhepburn/adonis-notifications",
-  "description": "A Laravel-inspired notifications provider for AdonisJS (currently only v6)",
-  "version": "0.1.0",
+  "name": "@benhepburn/adonis-notifications-aws-sns-channel",
+  "description": "An AWS SNS notification channel for @benhepburn/adonis-notifications",
+  "version": "0.0.0",
   "engines": {
     "node": ">=20.0.0"
   },
@@ -14,8 +14,7 @@
   ],
   "exports": {
     ".": "./build/index.js",
-    "./types": "./build/src/types.js",
-    "./notifications_provider": "./build/providers/notifications_provider.js"
+    "./types": "./build/src/types.js"
   },
   "scripts": {
     "clean": "del-cli build",
