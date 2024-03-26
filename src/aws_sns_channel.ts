@@ -25,12 +25,12 @@ export class AwsSnsChannel extends NotificationChannel {
 
   private buildAwsConfig(): SNSClientConfig {
     let credentials: any = {
-      aws_access_key_id: config.get('channel_aws_sns.awsAccessKeyId'),
-      aws_secret_access_key: config.get('channel_aws_sns.awsSecretAccessKey'),
-      aws_session_token: config.get('channel_aws_sns.awsSessionToken'),
+      accessKeyId: config.get('channel_aws_sns.awsAccessKeyId'),
+      secretAccessKey: config.get('channel_aws_sns.awsSecretAccessKey'),
+      sessionToken: config.get('channel_aws_sns.awsSessionToken'),
     }
 
-    if (!(credentials.aws_access_key_id && credentials.aws_secret_access_key))
+    if (!(credentials.accessKeyId && credentials.secretAccessKey))
       credentials = fromNodeProviderChain()
 
     return {
