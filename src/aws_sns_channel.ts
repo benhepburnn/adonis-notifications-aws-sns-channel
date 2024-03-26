@@ -12,7 +12,7 @@ export class AwsSnsChannel extends NotificationChannel {
     this.client = new SNSClient(this.buildAwsConfig())
   }
 
-  async send(notification: Notification): Promise<void> {
+  async send(notification: Notification): Promise<any> {
     const smsMessage = notification.toSms()
 
     const command = new PublishCommand({
@@ -20,7 +20,7 @@ export class AwsSnsChannel extends NotificationChannel {
       PhoneNumber: smsMessage.to,
     })
 
-    await this.client.send(command)
+    return this.client.send(command)
   }
 
   private buildAwsConfig(): SNSClientConfig {
