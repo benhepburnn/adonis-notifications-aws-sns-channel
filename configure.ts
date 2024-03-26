@@ -19,17 +19,7 @@ export async function configure(_command: ConfigureCommand) {
   const codemods = await _command.createCodemods()
 
   // Create config file
-  await codemods.makeUsingStub(stubsRoot, 'config/notifications.stub', {})
-
-  // Add service to rc file
-  try {
-    await codemods.updateRcFile((rcFile) => {
-      rcFile.addProvider('@benhepburn/adonis-notifications/notifications_provider')
-    })
-  } catch (error) {
-    console.error('Unable to update adonisrc.ts file')
-    console.error(error)
-  }
+  await codemods.makeUsingStub(stubsRoot, 'config/aws_sns_channel.stub', {})
 
   // Add env validations
   try {
