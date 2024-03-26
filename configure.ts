@@ -30,4 +30,21 @@ export async function configure(_command: ConfigureCommand) {
     console.error('Unable to update adonisrc.ts file')
     console.error(error)
   }
+
+  // Add env validations
+  try {
+    await codemods.defineEnvVariables({
+      AWS_SNS_REGION: '',
+    })
+
+    await codemods.defineEnvValidations({
+      leadingComment: 'AWS SNS environment variables',
+      variables: {
+        AWS_SNS_REGION: 'Env.schema.string()',
+      },
+    })
+  } catch (error) {
+    console.error('Unable to define env variables/validations')
+    console.error(error)
+  }
 }

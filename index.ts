@@ -9,3 +9,4 @@
 
 export { configure } from './configure.js'
 export { defineConfig } from './src/define_config.js'
+export { AwsSnsChannel } from './src/aws_sns_channel.js'

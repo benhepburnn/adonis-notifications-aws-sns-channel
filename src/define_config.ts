@@ -1,7 +1,7 @@
-import { NotificationsConfig } from './types.js'
+import { NotificationsAwsSnsChannelConfig } from './types.js'
 
-export function defineConfig(config: NotificationsConfig): NotificationsConfig {
-  return {
-    channels: config.channels,
-  }
+export function defineConfig(
+  config: NotificationsAwsSnsChannelConfig
+): NotificationsAwsSnsChannelConfig {
+  return config
 }
