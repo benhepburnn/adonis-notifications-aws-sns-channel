@@ -1,25 +1,25 @@
 # AdonisJS Notifications - AWS SNS Channel
 
-This package requires @benhepburn/adonis-notifications.
+This package requires @benhepburn/adonis-notifications and @aws-sdk/credential-providers.
 
 ## Install
 
-Install from npm:
+Install peer dependency @aws-sdk/credential-providers and this package from npm:
 
 ```sh
-npm install @benhepburn/adonis-notifications-aws-sns-channel
+npm install @aws-sdk/credential-providers @benhepburn/adonis-notifications-aws-sns-channel
 ```
 
 or
 
 ```sh
-pnpm install @benhepburn/adonis-notifications-aws-sns-channel
+pnpm install @aws-sdk/credential-providers @benhepburn/adonis-notifications-aws-sns-channel
 ```
 
 or
 
 ```sh
-yarn add @benhepburn/adonis-notifications-aws-sns-channel
+yarn add @aws-sdk/credential-providers @benhepburn/adonis-notifications-aws-sns-channel
 ```
 
 Then, configure the package for Adonis:
