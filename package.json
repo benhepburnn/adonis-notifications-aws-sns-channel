@@ -1,7 +1,7 @@
 {
   "name": "@benhepburn/adonis-notifications-aws-sns-channel",
   "description": "An AWS SNS notification channel for @benhepburn/adonis-notifications",
-  "version": "0.1.4",
+  "version": "1.0.0",
   "engines": {
     "node": ">=20.0.0"
   },
