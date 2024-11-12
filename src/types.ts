@@ -20,7 +20,7 @@ export interface NotifiableSnsPush {
 }
 
 export type SnsPushMessage = {
-  message: string
+  message: { default: string; GCM?: string; APNS?: string }
   targetArn?: string
   topicArn?: string
 }
