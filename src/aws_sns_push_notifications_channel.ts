@@ -12,7 +12,9 @@ export class AwsSnsPushNotificationsChannel extends NotificationChannel {
     const snsMessage = notification.toSnsPushNotification()
 
     const command = new PublishCommand({
+      // @ts-ignore
       Message: snsMessage.message,
+      MessageStructure: 'json',
       TargetArn: snsMessage.targetArn,
       TopicArn: snsMessage.topicArn,
     })
