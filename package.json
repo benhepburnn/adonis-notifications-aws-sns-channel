@@ -51,6 +51,7 @@
     "@adonisjs/eslint-config": "^1.2.1",
     "@adonisjs/prettier-config": "^1.2.1",
     "@adonisjs/tsconfig": "^1.2.1",
+    "@aws-sdk/client-sns": "^3.540.0",
     "@aws-sdk/credential-providers": "^3.540.0",
     "@benhepburn/adonis-notifications": "^0.5.0",
     "@japa/assert": "^2.1.0",
@@ -68,8 +69,9 @@
   },
   "peerDependencies": {
     "@adonisjs/core": "^6.2.0",
-    "@aws-sdk/credential-providers": "^3.540.0",
-    "@benhepburn/adonis-notifications": "^0.5.0"
+    "@aws-sdk/client-sns": "^3.687.0",
+    "@aws-sdk/credential-providers": "^3.687.0",
+    "@benhepburn/adonis-notifications": "^0.5.1"
   },
   "publishConfig": {
     "access": "public",
@@ -94,7 +96,4 @@
     "extends": "@adonisjs/eslint-config/package"
   },
   "prettier": "@adonisjs/prettier-config",
-  "dependencies": {
-    "@aws-sdk/client-sns": "^3.540.0"
-  }
 }
