@@ -19,7 +19,7 @@ export async function configure(_command: ConfigureCommand) {
   const codemods = await _command.createCodemods()
 
   // Create config file
-  await codemods.makeUsingStub(stubsRoot, 'config/channel_aws_sns.stub', {})
+  await codemods.makeUsingStub(stubsRoot, 'config/sns.stub', {})
 
   // Add env validations
   try {
