@@ -10,16 +10,16 @@ await app.booted(async (resolver) => {
 
 function buildAwsConfig(config: any): SNSClientConfig {
   let credentials: any = {
-    accessKeyId: config.get('channel_aws_sns.awsAccessKeyId'),
-    secretAccessKey: config.get('channel_aws_sns.awsSecretAccessKey'),
-    sessionToken: config.get('channel_aws_sns.awsSessionToken'),
+    accessKeyId: config.get('sns.awsAccessKeyId'),
+    secretAccessKey: config.get('sns.awsSecretAccessKey'),
+    sessionToken: config.get('sns.awsSessionToken'),
   }
 
   if (!(credentials.accessKeyId && credentials.secretAccessKey))
     credentials = fromNodeProviderChain()
 
   return {
-    region: config.get('channel_aws_sns.awsRegion'),
+    region: config.get('sns.awsRegion'),
     credentials,
   }
 }
