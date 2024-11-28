@@ -53,7 +53,7 @@
     "@adonisjs/tsconfig": "^1.4.0",
     "@aws-sdk/client-sns": "^3.687.0",
     "@aws-sdk/credential-providers": "^3.687.0",
-    "@benhepburn/adonis-notifications": "^0.5.1",
+    "@benhepburn/adonis-notifications": "^0.6.1",
     "@japa/assert": "^2.1.0",
     "@japa/runner": "^3.1.4",
     "@swc/core": "^1.9.2",
@@ -71,7 +71,7 @@
     "@adonisjs/core": "^6.2.0",
     "@aws-sdk/client-sns": "^3.687.0",
     "@aws-sdk/credential-providers": "^3.687.0",
-    "@benhepburn/adonis-notifications": "^0.5.1"
+    "@benhepburn/adonis-notifications": "^0.6.1"
   },
   "publishConfig": {
     "access": "public",
