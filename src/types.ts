@@ -8,6 +8,7 @@ export type NotificationsAwsSnsChannelConfig = {
 export type SnsSmsMessage = {
   message: string
   to: string | string[]
+  from?: string
 }
 
 export interface SnsSmsNotification {

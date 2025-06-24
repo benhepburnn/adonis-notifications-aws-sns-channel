@@ -14,11 +14,21 @@ export class AwsSnsSmsChannel extends NotificationChannel {
 
     const to = Array.isArray(snsMessage.to) ? snsMessage.to : [snsMessage.to]
 
+    const MessageAttributes = snsMessage.from
+      ? {
+          'AWS.SNS.SMS.SenderID': {
+            DataType: 'String',
+            StringValue: snsMessage.from,
+          },
+        }
+      : undefined
+
     const results: PublishCommandOutput[] = []
     for (const PhoneNumber of to) {
       const command = new PublishCommand({
         Message: snsMessage.message,
         PhoneNumber,
+        MessageAttributes,
       })
 
       results.push(await snsClient.send(command))
