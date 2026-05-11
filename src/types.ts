@@ -3,6 +3,7 @@ export type NotificationsAwsSnsChannelConfig = {
   awsAccessKeyId?: string
   awsSecretAccessKey?: string
   awsSessionToken?: string
+  awsRoleArn?: string
 }
 
 export type SnsSmsMessage = {
