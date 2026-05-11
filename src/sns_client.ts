@@ -9,9 +9,11 @@ await app.booted(async (resolver) => {
 })
 
 function buildAwsConfig(config: any): SNSClientConfig {
+  const snsConfig = config.get('sns')
+
   return {
-    region: config.get('sns.awsRegion'),
-    credentials: buildAwsCredentials(config),
+    region: snsConfig.awsRegion,
+    credentials: buildAwsCredentials(snsConfig),
   }
 }
 

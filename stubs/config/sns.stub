@@ -14,7 +14,6 @@ const snsConfig = defineConfig({
   awsAccessKeyId: env.get('AWS_SNS_ACCESS_KEY_ID'),
   awsSecretAccessKey: env.get('AWS_SNS_SECRET_ACCESS_KEY'),
   awsSessionToken: env.get('AWS_SNS_SESSION_TOKEN'),
-  awsSessionToken: env.get('AWS_SNS_SESSION_TOKEN'),
   awsRoleArn: env.get('AWS_SNS_ROLE_ARN'),
 })
 
